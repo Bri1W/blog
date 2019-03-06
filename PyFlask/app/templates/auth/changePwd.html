@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}
+    Flasky - Login
+{% endblock %}
+
+{% block page_content %}
+    <div class="page-header">
+        <h1>Modify Password</h1>
+    </div>
+    <div class="col-md-4">
+        {{ wtf.quick_form(form) }}
+    </div>
+        <div class="container">
+        {% for message in get_flashed_messages() %}
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+            </div>
+        {% endfor %}
+{% endblock %}
